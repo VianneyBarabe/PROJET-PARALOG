@@ -133,8 +133,7 @@ def main():
     except (OSError, ValueError) as erreur:
         print('Erreur : {}'.format(erreur), file=sys.stderr)
         return 1
-    
-    print(texte, end='')
+
     print('\nRapport enregistré dans : {}'.format(sortie), file=sys.stderr)
     return 0
 

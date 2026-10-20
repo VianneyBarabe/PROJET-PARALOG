@@ -246,7 +246,6 @@ def main():
     except OSError as erreur:
         print('Erreur de lecture/écriture : {}'.format(erreur), file=sys.stderr)
         return 1
-    print(texte, end='')
     print('\nRapport enregistré dans : {}'.format(args.sortie), file=sys.stderr)
     return 0
 
