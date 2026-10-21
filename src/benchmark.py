@@ -1,22 +1,13 @@
 import argparse
 import multiprocessing
 import sys
-import os
 from datetime import datetime
 from pathlib import Path
-from statistics import mean, stdev
+from statistics import mean
 from analyse_seq import entier_positif
 from analyse_par import analyser_parallele
 
-if hasattr(os, "sched_getaffinity"):
-    nombre_coeurs = len(os.sched_getaffinity(0))
-else:
-    nombre_coeurs = os.cpu_count() or 1
-
-WORKERS = tuple(sorted(
-    {1, nombre_coeurs}
-    | set(range(2, nombre_coeurs + 1, 2))
-))
+WORKERS = [1, 2, 4, 6, 8, 10, 15, 20]
 
 def creer_dossier(racine):
     racine.mkdir(parents=True, exist_ok=True)
@@ -62,7 +53,6 @@ def mesurer(chemin, essais):
         resultats.append({
             'workers': workers,
             'moyenne': mean(temps),
-            'ecart_type': stdev(temps) if essais > 1 else 0.0
         })
     return resultats
 
@@ -70,10 +60,9 @@ def mesurer(chemin, essais):
 def tracer(resultats, destination, plt, titre):
     nombres = [r['workers'] for r in resultats]
     moyennes = [r['moyenne'] for r in resultats]
-    ecarts = [r['ecart_type'] for r in resultats]
     fig, ax = plt.subplots(figsize=(10, 6))
-    ax.errorbar(nombres, moyennes, yerr=ecarts, fmt='o-', capsize=5,
-                color='steelblue', label='Temps moyen ± écart-type')
+    ax.plot(nombres, moyennes, 'o-',
+        color='steelblue', label='Temps moyen')
     for n, t in zip(nombres, moyennes):
         ax.annotate(f'{t:.2f} s', (n, t), xytext=(0, 10),
                     textcoords='offset points', ha='center', fontsize=9)
