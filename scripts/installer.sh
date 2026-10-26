@@ -26,8 +26,16 @@ getent group "$GROUPE" > /dev/null || sudo groupadd "$GROUPE"
 sudo usermod -aG "$GROUPE" "$USER"
 sudo chgrp -R "$GROUPE" "$RACINE"
 
-# 4. Droits
-chmod 750 "$RACINE"/{data,src,scripts,resultats,docs}
-chmod 700 "$RACINE/archives"
-
+# 4. Droits des dossiers (2 = setgid : les nouveaux fichiers gardent le groupe paralog)
+sudo chmod 2770 "$RACINE" "$RACINE"/{src,scripts,docs,resultats}
+sudo chmod 750  "$RACINE/data"
+sudo chmod 700  "$RACINE/archives"
+ 
+# 5. Droits des fichiers déjà présents
+find "$RACINE/data"     -type f -name '*.log'    -exec chmod 640 {} +
+find "$RACINE/src"      -type f -name '*.py'     -exec chmod 660 {} +
+find "$RACINE/scripts"  -type f -name '*.sh'     -exec chmod 770 {} +
+find "$RACINE/docs"     -type f                  -exec chmod 660 {} +
+find "$RACINE/archives" -type f -name '*.tar.gz' -exec chmod 600 {} +
+ 
 echo "Installation terminée dans $RACINE"
