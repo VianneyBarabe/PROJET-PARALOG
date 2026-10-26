@@ -158,5 +158,5 @@ RÉPARTITION PAR DATE
 
 TEMPS
 -----
-Temps d'analyse : 119.597222 secondes
+Temps d'analyse : 119.465626 secondes
 Mesure : lecture, validation et comptage ; écriture du rapport exclue.
