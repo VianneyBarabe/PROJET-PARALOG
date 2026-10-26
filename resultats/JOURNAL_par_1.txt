@@ -1,0 +1,162 @@
+JOURNAL — RAPPORT D’ANALYSE WEB
+============================================================
+
+SYNTHÈSE
+--------
+Date sélectionnée : toutes les dates du fichier
+Lignes lues : 9000000
+Lignes valides analysées : 9000000
+Lignes ignorées car mal formées : 0
+Lignes valides hors date sélectionnée : 0
+Requêtes retenues pour les statistiques : 9000000
+IP distinctes (pas un nombre de visiteurs) : 6001
+Pages/cibles distinctes : 217
+Première date/heure locale observée : 2026-10-07 00:00:00
+Dernière date/heure locale observée : 2026-10-07 23:59:59
+Fuseaux présents : +0200
+Les heures sont celles inscrites dans les logs, sans conversion.
+Une absence de requêtes ne prouve pas que la collecte couvre 24 h.
+
+1. REQUÊTES PAR CODE HTTP
+-------------------------
+200 : 7272103
+301 : 177293
+302 : 177012
+304 : 531260
+403 : 87941
+404 : 577988
+500 : 132480
+503 : 43923
+
+2. LES 10 ADRESSES IP LES PLUS ACTIVES
+--------------------------------------
+10.42.213.80 : 368083
+172.16.180.171 : 211719
+10.42.221.253 : 153475
+203.0.113.66 : 134754
+10.42.69.104 : 121690
+192.168.1.39 : 101428
+10.42.111.28 : 87296
+172.16.121.79 : 77429
+10.20.209.98 : 69386
+192.0.2.218 : 63524
+
+3. LES 10 PAGES LES PLUS DEMANDÉES
+----------------------------------
+/ : 1497708
+/produits/118 : 749262
+/produits/9 : 499230
+/produits/110 : 374156
+/produits/63 : 299346
+/produits/46 : 248822
+/produits/117 : 213149
+/images/photo-8.jpg : 187555
+/api/v1/panier : 166752
+/produits/25 : 149391
+
+4. REQUÊTES PAR HEURE (24 TRANCHES)
+-----------------------------------
+00h : 150628
+01h : 112971
+02h : 75314
+03h : 75314
+04h : 75314
+05h : 112971
+06h : 225941
+07h : 376569
+08h : 527197
+09h : 602510
+10h : 640167
+11h : 602510
+12h : 527197
+13h : 564854
+14h : 602510
+15h : 602510
+16h : 564854
+17h : 527197
+18h : 451883
+19h : 414226
+20h : 376569
+21h : 338912
+22h : 263598
+23h : 188284
+
+PRODUITS LES PLUS DEMANDÉS (TOP 10)
+-----------------------------------
+/produits/118 : 749262
+/produits/9 : 499230
+/produits/110 : 374156
+/produits/63 : 299346
+/produits/46 : 248822
+/produits/117 : 213149
+/produits/25 : 149391
+/produits/28 : 124639
+/produits/101 : 99951
+/produits/74 : 82836
+
+MÉTHODES HTTP
+-------------
+GET : 7936771
+HEAD : 88566
+POST : 886532
+PUT : 88131
+
+PROTOCOLES HTTP
+---------------
+HTTP/1.1 : 9000000
+
+ERREURS HTTP
+------------
+Réponses 4xx : 665929
+Réponses 5xx : 176403
+Part des réponses 4xx/5xx : 9.36 %
+Pages/cibles avec le plus de réponses 4xx/5xx :
+/ : 119436
+/produits/118 : 59684
+/produits/9 : 39838
+/produits/110 : 29999
+/produits/63 : 23674
+/produits/46 : 20008
+/.git/config : 19401
+/wp-admin/ : 19378
+/xmlrpc.php : 19332
+/.env : 19329
+
+VOLUME DES RÉPONSES
+-------------------
+Octets déclarés connus : 232802350695
+Volume connu en Mio : 222017.62
+Tailles non renseignées (-) : 614471
+Le champ taille ne mesure pas tout le trafic réseau (en-têtes exclus).
+
+RÉFÉRENTS DÉCLARÉS (TOP 10 ; - = NON RENSEIGNÉ)
+-----------------------------------------------
+- : 3679683
+https://www.google.fr/ : 2217069
+https://www.webnorm.example/ : 1330622
+https://www.webnorm.example/produits : 531178
+https://www.bing.com/ : 444118
+https://www.webnorm.example/blog : 354633
+https://www.qwant.com/ : 265721
+https://duckduckgo.com/ : 176976
+
+USER-AGENTS DÉCLARÉS (TOP 10)
+-----------------------------
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36 : 3013107
+Mozilla/5.0 (Macintosh; Intel Mac OS X 14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15 : 1596730
+Mozilla/5.0 (iPhone; CPU iPhone OS 17_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 : 1595643
+Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Mobile Safari/537.36 : 1241147
+Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0 : 709749
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html) : 531451
+curl/8.5.0 : 177419
+Mozilla/5.0 zgrab/0.x : 134754
+Ces chaînes sont déclaratives : elles ne prouvent pas une identité.
+
+RÉPARTITION PAR DATE
+--------------------
+2026-10-07 : 9000000
+
+TEMPS
+-----
+Temps d'analyse : 38.282609 secondes
+Mesure : lecture, validation et comptage ; écriture du rapport exclue.
