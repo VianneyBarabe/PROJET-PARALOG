@@ -1,2 +1,5 @@
 access.log
 access.log
+*:Zone.Identifier
+__pycache__/
+__pycache__/
